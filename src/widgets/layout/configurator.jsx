@@ -1,19 +1,19 @@
-import React from "react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
-  Button,
-  IconButton,
-  Switch,
-  Typography,
-  Chip,
-} from "@material-tailwind/react";
-import {
-  useMaterialTailwindController,
+  setFixedNavbar,
   setOpenConfigurator,
   setSidenavColor,
   setSidenavType,
-  setFixedNavbar,
+  useMaterialTailwindController,
 } from "@/context";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Button,
+  Chip,
+  IconButton,
+  Switch,
+  Typography,
+} from "@material-tailwind/react";
+import React from "react";
 
 function formatNumber(number, decPlaces) {
   decPlaces = Math.pow(10, decPlaces);
@@ -148,7 +148,7 @@ export function Configurator() {
           <hr />
           <div className="my-8 flex flex-col gap-4">
             <a
-              href="https://www.creative-tim.com/product/material-tailwind-dashboard-react?rel=mtdr"
+              href="https://themewagon.com/themes/material-tailwind-dashboard-react/"
               target="_black"
             >
               <Button variant="gradient" fullWidth>
@@ -163,18 +163,18 @@ export function Configurator() {
                 View Documentation
               </Button>
             </a>
-            <a
+            {/* <a
               href="https://www.material-tailwind.com/blocks/react?rel=mtdr"
               target="_black"
             >
               <Button variant="outlined" color="blue-gray" fullWidth>
                 Material Tailwind PRO
               </Button>
-            </a>
+            </a> */}
           </div>
           <a
             className="mx-auto flex items-center justify-center gap-2"
-            href="https://github.com/creativetimofficial/material-tailwind-dashboard-react"
+            href="https://github.com/themewagon/material-tailwind-dashboard-react"
             target="_blank"
             rel="noreferrer"
           >

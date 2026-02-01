@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import {
-  Navbar as MTNavbar,
-  Collapse,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Button,
+  Collapse,
+  IconButton,
+  Navbar as MTNavbar,
+  Typography,
+} from "@material-tailwind/react";
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -86,7 +86,7 @@ Navbar.defaultProps = {
   brandName: "Material Tailwind React",
   action: (
     <a
-      href="https://www.creative-tim.com/product/material-tailwind-dashboard-react"
+      href="https://themewagon.com/themes/material-tailwind-dashboard-react/"
       target="_blank"
     >
       <Button variant="gradient" size="sm" fullWidth>
