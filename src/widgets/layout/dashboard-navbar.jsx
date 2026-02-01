@@ -30,7 +30,9 @@ export function DashboardNavbar() {
   const [controller, dispatch] = useMaterialTailwindController();
   const { fixedNavbar, openSidenav } = controller;
   const { pathname } = useLocation();
-  const [layout, page] = pathname.split("/").filter((el) => el !== "");
+  const pathSegments = pathname.split("/").filter((el) => el !== "");
+  const layout = pathSegments[0] ?? "dashboard";
+  const page = pathSegments[1] ?? "home";
 
   return (
     <Navbar
