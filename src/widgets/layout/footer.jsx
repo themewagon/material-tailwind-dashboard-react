@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import { Typography } from "@material-tailwind/react";
 import { HeartIcon } from "@heroicons/react/24/solid";
+import { Typography } from "@material-tailwind/react";
+import PropTypes from "prop-types";
 
 export function Footer({ brandName, brandLink, routes }) {
   const year = new Date().getFullYear();
@@ -18,16 +18,19 @@ export function Footer({ brandName, brandLink, routes }) {
           >
             {brandName}
           </a>{" "}
-          for a better web.
+          for a better web. Distributed by <a href="https://themewagon.com" target="_blank" className="transition-colors hover:text-blue-500 font-bold">ThemeWagon</a>
         </Typography>
         <ul className="flex items-center gap-4">
           {routes.map(({ name, path }) => (
             <li key={name}>
               <Typography
                 as="a"
-                href={path}
+                href={import.meta.env.BASE_URL + '#!'}
                 target="_blank"
                 variant="small"
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
                 className="py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
               >
                 {name}
