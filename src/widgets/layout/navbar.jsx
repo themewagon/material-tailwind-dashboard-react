@@ -86,7 +86,7 @@ Navbar.defaultProps = {
   brandName: "Material Tailwind React",
   action: (
     <a
-      href="https://themewagon.com/themes/material-tailwind-dashboard-react/"
+      href="https://themewagon.com/themes/free-react-tailwind-css-admin-dashboard-template-material/"
       target="_blank"
     >
       <Button variant="gradient" size="sm" fullWidth>

@@ -148,7 +148,7 @@ export function Configurator() {
           <hr />
           <div className="my-8 flex flex-col gap-4">
             <a
-              href="https://themewagon.com/themes/material-tailwind-dashboard-react/"
+              href="https://themewagon.com/themes/free-react-tailwind-css-admin-dashboard-template-material/"
               target="_black"
             >
               <Button variant="gradient" fullWidth>
