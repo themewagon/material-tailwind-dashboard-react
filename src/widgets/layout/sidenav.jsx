@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
   Avatar,
@@ -11,6 +11,7 @@ import { useMaterialTailwindController, setOpenSidenav } from "@/context";
 
 export function Sidenav({ brandImg, brandName, routes }) {
   const [controller, dispatch] = useMaterialTailwindController();
+  const { pathname } = useLocation();
   const { sidenavColor, sidenavType, openSidenav } = controller;
   const sidenavTypes = {
     dark: "bg-gradient-to-br from-gray-800 to-gray-900",
@@ -62,12 +63,24 @@ export function Sidenav({ brandImg, brandName, routes }) {
             )}
             {pages.map(({ icon, name, path }) => (
               <li key={name}>
-                <NavLink to={`/${layout}${path}`}>
-                  {({ isActive }) => (
+                <NavLink
+                  to={
+                    layout === "dashboard" && path === "/home"
+                      ? "/"
+                      : `/${layout}${path}`
+                  }
+                >
+                  {({ isActive }) => {
+                    const isDashboardHome =
+                      layout === "dashboard" &&
+                      path === "/home" &&
+                      (pathname === "/" || pathname === "/dashboard/home");
+                    const active = isDashboardHome || isActive;
+                    return (
                     <Button
-                      variant={isActive ? "gradient" : "text"}
+                      variant={active ? "gradient" : "text"}
                       color={
-                        isActive
+                        active
                           ? sidenavColor
                           : sidenavType === "dark"
                           ? "white"
@@ -84,7 +97,8 @@ export function Sidenav({ brandImg, brandName, routes }) {
                         {name}
                       </Typography>
                     </Button>
-                  )}
+                  );
+                  }}
                 </NavLink>
               </li>
             ))}
