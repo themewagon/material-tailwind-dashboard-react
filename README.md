@@ -5,7 +5,7 @@
  - [Demo](https://themewagon.github.io/material-tailwind-dashboard-react/)
 
 #### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/material-tailwind-dashboard-react/)
+ - [Download from ThemeWagon](https://themewagon.com/themes/free-react-tailwind-css-admin-dashboard-template-material/)
  
  
 ## Getting Started
